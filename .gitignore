@@ -169,3 +169,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore venv folders
+bin/
+include/
+lib/
+pyvenv.cfg
+
+# Ignore Mac files
+.DS_Store
