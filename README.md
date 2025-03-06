@@ -59,8 +59,11 @@ $ pip install -r requirements.txt
 3. Run the script:
 
 ```
-$ python app.py
+$ python app.py <start_date> <end_date>
 ```
+
+`<start_date>` (optional): The start date from which to start fetching emails (defaults to today). Format: YYYY-MM-DD
+`<end_date>` (optional): The end date (inclusive) for which to fetch emails (defaults to today). Format: YYYY-MM-DD
 
 After running the script for the first time, a `token.json` file will be generated, storing access and refresh tokens for future authentication.
 
