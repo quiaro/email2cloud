@@ -2,7 +2,6 @@ import os
 import dropbox
 from utils import load_config
 
-# Load configuration from config.json
 CREDENTIALS_FILE = "credentials.json"
 
 # Load Dropbox Access Token
