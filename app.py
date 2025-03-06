@@ -6,6 +6,13 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
+from utils import load_config
+
+CONFIG_FILE = "config.json"
+
+# Load app config
+config = load_config(CONFIG_FILE)
+MAX_EMAILS_FETCHED = config.get("MAX_EMAILS_FETCHED")
 
 # Gmail API scopes
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
@@ -57,7 +64,7 @@ def parse_dates():
 def get_emails_in_date_range(service, start_date, end_date):
     """Fetches emails within the specified date range."""
     query = f"after:{start_date} before:{(end_date + datetime.timedelta(days=1))}"  # End date inclusive
-    results = service.users().messages().list(userId="me", q=query, maxResults=100).execute()
+    results = service.users().messages().list(userId="me", q=query, maxResults=MAX_EMAILS_FETCHED).execute()
     messages = results.get("messages", [])
 
     if not messages:
