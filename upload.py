@@ -1,18 +1,9 @@
 import os
-import json
 import dropbox
+from utils import load_config
 
 # Load configuration from config.json
 CREDENTIALS_FILE = "credentials.json"
-
-def load_config(config_file):
-    """Loads configuration from a JSON file."""
-    if not os.path.exists(config_file):
-        print(f"Error: Configuration file {config_file} not found.")
-        exit(1)
-
-    with open(config_file, "r") as file:
-        return json.load(file)
 
 # Load Dropbox Access Token
 config = load_config(CREDENTIALS_FILE)
