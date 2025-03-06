@@ -65,6 +65,24 @@ $ python app.py <start_date> <end_date>
 `<start_date>` (optional): The start date from which to start fetching emails (defaults to today). Format: YYYY-MM-DD
 `<end_date>` (optional): The end date (inclusive) for which to fetch emails (defaults to today). Format: YYYY-MM-DD
 
+For example, running:
+
+```
+$ python app.py 2025-07-09 2025-07-11
+```
+
+Should fetch all emails from July 9th to July 11th and output the list of emails that were created in the console, similar to:
+
+```
+Email saved as 2025-07-11-1.txt
+Email saved as 2025-07-11-2.txt
+Email saved as 2025-07-10-1.txt
+Email saved as 2025-07-10-2.txt
+Email saved as 2025-07-10-3.txt
+Email saved as 2025-07-09-1.txt
+Email saved as 2025-07-09-2.txt
+```
+
 After running the script for the first time, a `token.json` file will be generated, storing access and refresh tokens for future authentication.
 
 ## Detalles del Ambiente de Programación
