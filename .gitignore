@@ -178,3 +178,8 @@ pyvenv.cfg
 
 # Ignore Mac files
 .DS_Store
+
+# Ignore API keys, access tokens and any other secret information
+client_secret.json
+token.json
+credentials.json
