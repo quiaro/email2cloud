@@ -170,16 +170,19 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Ignore venv folders
+# venv folders
 bin/
 include/
 lib/
 pyvenv.cfg
 
-# Ignore Mac files
+# Mac files
 .DS_Store
 
-# Ignore API keys, access tokens and any other secret information
+# API keys, access tokens and any other secret information
 client_secret.json
 token.json
 credentials.json
+
+# IDE files
+.vscode
