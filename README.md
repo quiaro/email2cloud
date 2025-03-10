@@ -2,7 +2,7 @@
 
 Aplicación que lee correos electrónicos y los sube a la nube
 
-Esta pequeña aplicación consiste en un script de Python que hace lo siguiente:
+Script de Python que hace lo siguiente:
 
 1. Lee los correos de una cuenta de Gmail dentro de un intervalo de fechas
 2. Copia cada uno de los correos al sistema de archivos local
